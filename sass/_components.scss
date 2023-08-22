@@ -1,0 +1,114 @@
+@mixin button-sm {
+    font-size: 1.2rem;
+    padding: 0.1rem 1rem;
+}
+
+$color-main: #0075FF;
+
+.button__main {
+    background-color: $color-main;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.2rem 1.5rem;
+    border-radius: 0.25rem;
+    border: none;
+    border: 1px solid $color-main;
+
+    &:hover {
+        background-color: white;
+        color: $color-main;
+        border: 1px solid $color-main;
+    }
+
+    &-s {
+        @extend .button__main;
+        @include button-sm();
+    }
+}
+
+.button__secondary {
+    @extend .button__main;
+    color: #000;
+    background-color: transparent;
+    border: none;
+
+    &:hover {
+        color: #888;
+        border: none;
+    }
+
+    &-s {
+        @extend .button__secondary;
+        @include button-sm();
+    }
+}
+
+.menu__main {
+
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style: none;
+        display: inline;
+        a {
+            color: black;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.icon-s {
+    font-size: 1.5rem;
+    padding: 0.5rem 0.75rem;
+    box-shadow: 0 0 10px #00000040;
+    border-radius: 50%;
+    i {
+        color: $color-main;
+    }
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .icon {
+        color: $color-main;
+        font-size: 8rem;
+    }
+
+    .description {
+        .title {
+            font-size: 2rem;
+        }
+
+        .text {
+            color: #888;
+            font-weight: 600;
+        }
+    }
+
+    .cta {
+        color: $color-main;
+        font-weight: 600;
+        margin-top: 3rem;
+        
+    }
+}
+
+.icon-desc {
+    text-align: center;
+    .icon {
+        color: $color-main;
+        font-size: 8rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+}
