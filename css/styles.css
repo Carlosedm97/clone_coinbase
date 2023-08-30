@@ -65,7 +65,7 @@
 }
 .benefit .icon {
   color: #0075FF;
-  font-size: 7rem;
+  font-size: 5rem;
 }
 .benefit .description .title {
   font-size: 2rem;
@@ -188,6 +188,17 @@ body {
 
 .sec__benefits {
   border-top: 1px solid #ddd;
+}
+
+.sec__kpis {
+  width: 100%;
+  background-color: #0075FF;
+  color: white;
+  padding: 4rem;
+}
+.sec__kpis .kpi {
+  display: flex;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=styles.css.map */
