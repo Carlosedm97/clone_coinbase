@@ -4,6 +4,7 @@
 }
 
 $color-main: #0075FF;
+$color-footer: #f4f8fe;
 
 .button__main {
     background-color: $color-main;
@@ -107,7 +108,7 @@ $color-main: #0075FF;
     text-align: center;
     .icon {
         color: $color-main;
-        font-size: 8rem;
+        font-size: 5rem;
     }
 
     .title {

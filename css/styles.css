@@ -85,7 +85,7 @@
 }
 .icon-desc .icon {
   color: #0075FF;
-  font-size: 8rem;
+  font-size: 5rem;
 }
 .icon-desc .title {
   font-size: 2rem;
@@ -129,60 +129,66 @@ body {
 .sec__home .home-cta .cta-text i {
   font-weight: 600;
 }
+.sec__home .home-cta .home-description {
+  width: 300px;
+}
 .sec__home .home-cta .home-title {
   font-size: 4rem;
 }
+.sec__home .home-cta .lead-magnet .input-text {
+  max-width: 200px;
+}
 
-.sec__features, .sec__benefits {
+.sec__features, .sec__onboarding, .sec__benefits {
   width: 100%;
   margin: auto;
   padding: 5rem;
   align-items: center;
 }
-.sec__features .intro, .sec__features .sec__benefits, .sec__benefits .intro, .sec__benefits .sec__benefits {
+.sec__features .intro, .sec__features .sec__onboarding, .sec__onboarding .intro, .sec__onboarding .sec__onboarding, .sec__features .sec__benefits, .sec__onboarding .sec__benefits, .sec__benefits .intro, .sec__benefits .sec__onboarding, .sec__benefits .sec__benefits {
   text-align: center;
 }
-.sec__features .intro h3, .sec__features .sec__benefits h3, .sec__benefits .intro h3, .sec__benefits .sec__benefits h3 {
+.sec__features .intro h3, .sec__features .sec__onboarding h3, .sec__onboarding .intro h3, .sec__onboarding .sec__onboarding h3, .sec__features .sec__benefits h3, .sec__onboarding .sec__benefits h3, .sec__benefits .intro h3, .sec__benefits .sec__onboarding h3, .sec__benefits .sec__benefits h3 {
   font-size: 1.8rem;
 }
-.sec__features .intro p, .sec__features .sec__benefits p, .sec__benefits .intro p, .sec__benefits .sec__benefits p {
+.sec__features .intro p, .sec__features .sec__onboarding p, .sec__onboarding .intro p, .sec__onboarding .sec__onboarding p, .sec__features .sec__benefits p, .sec__onboarding .sec__benefits p, .sec__benefits .intro p, .sec__benefits .sec__onboarding p, .sec__benefits .sec__benefits p {
   font-size: 0.8rem;
   color: #888;
 }
-.sec__features .features, .sec__benefits .features {
+.sec__features .features, .sec__onboarding .features, .sec__benefits .features {
   display: flex;
   justify-content: center;
 }
-.sec__features .features .text, .sec__benefits .features .text {
+.sec__features .features .text, .sec__onboarding .features .text, .sec__benefits .features .text {
   max-width: 50%;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.sec__features .features .text .feature, .sec__benefits .features .text .feature {
+.sec__features .features .text .feature, .sec__onboarding .features .text .feature, .sec__benefits .features .text .feature {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
 }
-.sec__features .features .text .feature .icon-s, .sec__benefits .features .text .feature .icon-s {
+.sec__features .features .text .feature .icon-s, .sec__onboarding .features .text .feature .icon-s, .sec__benefits .features .text .feature .icon-s {
   align-self: flex-start;
 }
-.sec__features .features .text .feature .description, .sec__benefits .features .text .feature .description {
+.sec__features .features .text .feature .description, .sec__onboarding .features .text .feature .description, .sec__benefits .features .text .feature .description {
   width: 60%;
 }
-.sec__features .features .text .feature .description .description-title, .sec__benefits .features .text .feature .description .description-title {
+.sec__features .features .text .feature .description .description-title, .sec__onboarding .features .text .feature .description .description-title, .sec__benefits .features .text .feature .description .description-title {
   display: flex;
   font-size: 1.25rem;
   align-self: flex-start;
   text-align: start;
 }
-.sec__features .features .text .feature .description .description-text, .sec__benefits .features .text .feature .description .description-text {
+.sec__features .features .text .feature .description .description-text, .sec__onboarding .features .text .feature .description .description-text, .sec__benefits .features .text .feature .description .description-text {
   font-size: 1rem;
   text-align: start;
 }
-.sec__features .features .image img, .sec__benefits .features .image img {
+.sec__features .features .image img, .sec__onboarding .features .image img, .sec__benefits .features .image img {
   max-width: 40rem;
 }
 
@@ -195,10 +201,84 @@ body {
   background-color: #0075FF;
   color: white;
   padding: 4rem;
+  margin: 0;
 }
 .sec__kpis .kpi {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+.sec__kpis .kpi .number {
+  font-size: 3rem;
+  font-weight: 600;
+}
+.sec__kpis .kpi .desc {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6666666667);
+}
+
+.sec__onboarding .steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sec__onboarding .steps .step-separator {
+  flex: 1;
+  border-top: 2px solid #ddd;
+}
+
+.sec__footer-cta {
+  padding: 5rem;
+  background-color: #f4f8fe;
+  background-image: url("../assets/images/footer-image.webp");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+}
+.sec__footer-cta .footer-cta {
+  width: 50%;
+}
+.sec__footer-cta .footer-cta .cta-title {
+  font-size: 2rem;
+}
+.sec__footer-cta .footer-cta .cta-description {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 425px) {
+  .nav {
+    width: 100%;
+    padding: 5px 5%;
+  }
+  .sec__home {
+    width: 100%;
+    margin: auto;
+    padding: 5rem 5%;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .sec__home .home-cta {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex: none;
+    justify-content: center;
+    gap: 30px;
+  }
+  .sec__home .home-cta .home-title {
+    margin: 0;
+    width: 200px;
+    font-size: 2rem;
+  }
+  .sec__home .home-cta .home-description {
+    margin: 0;
+  }
+  .sec__onboarding .steps {
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
