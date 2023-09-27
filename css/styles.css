@@ -104,6 +104,7 @@ body {
   height: 4rem;
   border-bottom: 1px solid #ddd;
   padding: 0 5rem;
+  box-sizing: border-box;
 }
 .nav .logo img {
   max-width: 7rem;
@@ -135,7 +136,7 @@ body {
 .sec__home .home-cta .home-title {
   font-size: 4rem;
 }
-.sec__home .home-cta .lead-magnet .input-text {
+.sec__home .home-cta .lead-magnet .input-col {
   max-width: 200px;
 }
 
@@ -275,6 +276,22 @@ body {
   }
   .sec__home .home-cta .home-description {
     margin: 0;
+  }
+  .sec__features, .sec__benefits, .sec__onboarding {
+    width: 100%;
+    margin: auto;
+    padding: 5rem 5%;
+  }
+  .sec__features .features, .sec__benefits .features, .sec__onboarding .features {
+    display: block;
+    width: 100%;
+  }
+  .sec__features .features .text, .sec__benefits .features .text, .sec__onboarding .features .text {
+    max-width: none;
+    width: 100%;
+  }
+  .sec__features .features .text .feature, .sec__benefits .features .text .feature, .sec__onboarding .features .text .feature {
+    justify-content: space-evenly;
   }
   .sec__onboarding .steps {
     flex-direction: column;

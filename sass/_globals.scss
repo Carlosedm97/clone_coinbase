@@ -26,6 +26,7 @@ body {
     height: 4rem;
     border-bottom: 1px solid #ddd;
     padding: 0 5rem;
+    box-sizing: border-box;
     
     .logo img {
         max-width: 7rem;
@@ -59,7 +60,7 @@ body {
         }
 
         .lead-magnet {
-            .input-text {
+            .input-col {
                 max-width: 200px;
             }
         }
@@ -218,6 +219,21 @@ body {
 
             .home-description {
                 margin: 0;
+            }
+        }
+    }
+
+    .sec__features {
+        @include section-display-s();
+        .features {
+            display: block;
+            width: 100%;
+            .text {
+                max-width: none;
+                width: 100%;
+                .feature {
+                    justify-content: space-evenly;
+                }
             }
         }
     }
